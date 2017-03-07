@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--어트리뷰트에 쓸 위젯을 지정-->
+    <declare-styleable name="Today">
+        <!-- delimeter 속성으로 들어갈 값의 타입 : format -->
+        <attr name="delimeter" format = "string"/>
+    </declare-styleable>
+    
+    
+</resources>
