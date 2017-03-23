@@ -1,7 +1,7 @@
 [ Data : 2017. 03. 20(월) ]
 
 
-##### To do : RX 자바 설정 5장, 6장 내용 보충
+##### 6장 내용 보충
 
 
 
@@ -19,6 +19,10 @@
 
 - 내용 : Rx 자바에 대한 이해 
 
+- 참고
+
+	https://realm.io/kr/news/rxandroid/
+	https://medium.com/@LIP/rxjava-29cfb3ceb4ca#.y434pocx4
 
 # 1 Rx자바란?
 
@@ -27,6 +31,20 @@
 
 ## 설정
 
+### Gradle 환경설정
+
+android 하위에 아래 코드를 추가합니다.
+
+		    // Rx에서 람다 표현식을 사용하기 위해 설정
+		    compileOptions{
+		        sourceCompatibility JavaVersion.VERSION_1_8
+		        targetCompatibility JavaVersion.VERSION_1_8
+		    }
+
+dependencies에 아래 코드를 추가합니다.
+
+		    compile 'io.reactivex.rxjava2:rxjava:2.0.7'
+		    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
 
 ---------------------------------------------------
 
@@ -93,9 +111,13 @@
 
 ##5.1 Hot / Cold Observable 개념
 
-Observable이 전달한 데이터를 Subscriber가 어느 시점부터 구독하느냐에 따라 차이가 있습니다. Hot Observable은 Observable이 생성되자마자 데이터를 emit합니다. 그래서 Subscriber가 중간에 아무때나 이 데이터를 관찰할 수 있습니다. 하지만 Cold Observable은 반대입니다. Observable은 Subscriber가 구독을 시작할 때까지 emit하지 않고 기다립니다. 따라서 어떤 Subscriber든지 데이터 첫 연산부터 마지막까지 관찰할 수 있습니다.
+Observable이 전달한 데이터를 Subscriber가 어느 시점부터 구독하느냐에 따라 차이가 있습니다. Hot Observable은 Observable이 생성되자마자 데이터를 emit합니다. 그래서 Subscriber가 중간에 아무때나 이 데이터를 관찰할 수 있습니다. 하지만 Cold Observable는 반대입니다. Observable은 Subscriber가 구독을 시작할 때까지 emit하지 않고 기다립니다. 따라서 어떤 Subscriber든지 데이터 첫 연산부터 마지막까지 관찰할 수 있습니다.
 
-![]()
+
+		publish(): subscribe()하기에 앞서 이후에 도착한 것들을 내려보낸다. (Multicast）
+
+		replay(): subscribe()할 때마다 지금까지 도착한 item들을 전부 다시 전달합니다. (최근의 n건만 전달하는 것도 가능.)
+
 
 # 6. RxBasic5Binding
 
@@ -103,7 +125,7 @@ Observable이 전달한 데이터를 Subscriber가 어느 시점부터 구독하
 
 
 
-# 그 외 공부해야한느 것들
+# 그 외 공부해야하는 것들
 
 Subject in Android
 
