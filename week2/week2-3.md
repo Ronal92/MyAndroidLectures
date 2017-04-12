@@ -6,9 +6,9 @@
 							(3) String 관련 함수 사용
 							(4) 달팽이코드
 
-#1. 배열 이해하기
+# 1. 배열 이해하기
 
-###1차원 배열
+### 1차원 배열
  
 ###### 선언 
 
@@ -33,7 +33,7 @@
 
 
 
-###2차원 배열
+### 2차원 배열
 
 ###### 선언
 ![](http://i.imgur.com/veyRmkS.jpg)
@@ -42,7 +42,7 @@
 ###### 출력
 ![](http://i.imgur.com/PJRAeP4.png)
 
-###3차원 배열
+### 3차원 배열
 
 
 
@@ -62,7 +62,7 @@
 ----------
 
 
-#2. Collection Framework
+# 2. Collection Framework
  Collection Framework란 배열이 가지고 있는 불편함, 한계를 쉽게 벗어나게 도와주고 인스턴스의 저장 및 참고를 목적으로 하는 프레임 워크이다.
 
 무슨 말인지 알겠으니 이제 프레임워크로써 사용하는 ArrayList를 살펴보면!!!
@@ -121,7 +121,7 @@ ArrayList의 장점은 Collection의 타입(String , Integer 등)이 달라도 �
 				               ***********************************     
 
 
-##문자열 비교
+## 문자열 비교
 **System.out.println(a.compareTo(b));**
 
 **System.out.println(a.compareTo(c));**
@@ -134,21 +134,21 @@ ArrayList의 장점은 Collection의 타입(String , Integer 등)이 달라도 �
 
 ![](http://i.imgur.com/cABDhaM.png)
 
-##문자열의 인덱스
+## 문자열의 인덱스
 **System.out.println(a.charAt(2));**
 
 [출력화면]
 
 ![](http://i.imgur.com/y8L5Jve.png)
 
-##문자열 합치기
+## 문자열 합치기
 **System.out.println(a+b);**
 
 [출력화면]
 
 ![](http://i.imgur.com/T8arv7c.png)
 
-##문자열이 무엇으로 시작하는지 파악
+## 문자열이 무엇으로 시작하는지 파악
 **System.out.println(a.startsWith("23"));**
 
 **System.out.println(a.endsWith("31"));**
@@ -158,7 +158,7 @@ ArrayList의 장점은 Collection의 타입(String , Integer 등)이 달라도 �
 ![](http://i.imgur.com/oPZrfkc.png)
 
 
-##문자열에서 찾고자 하는 데이터의 위치 알아내기
+## 문자열에서 찾고자 하는 데이터의 위치 알아내기
 **System.out.println(a.indexOf("8"));**
 
 [출력화면]
@@ -166,7 +166,7 @@ ArrayList의 장점은 Collection의 타입(String , Integer 등)이 달라도 �
 ![](http://i.imgur.com/YdZzf0J.png)
 
 
-##문자열의 길이
+## 문자열의 길이
 **System.out.println(a.length());**
 
 [출력화면]
@@ -174,7 +174,7 @@ ArrayList의 장점은 Collection의 타입(String , Integer 등)이 달라도 �
 ![](http://i.imgur.com/Assottr.png)
 
 
-##문자열 변경
+## 문자열 변경
 **System.out.println(a.replace("1","X"));**
 
 [출력화면]
@@ -182,7 +182,7 @@ ArrayList의 장점은 Collection의 타입(String , Integer 등)이 달라도 �
 ![](http://i.imgur.com/weCgDgY.png)
 
 
-##문자열 자르기
+## 문자열 자르기
 **System.out.println(a.substring(3)); // 3번째부터 문자를 데리고 온다.**
 
 
@@ -194,7 +194,7 @@ ArrayList의 장점은 Collection의 타입(String , Integer 등)이 달라도 �
 
 ![](http://i.imgur.com/k7WC2i7.png)
 
-##문자열 분리하기
+## 문자열 분리하기
 **String value = "abcd";**
 
 **String values[] = value.split(""); //  문자열을 분리할 기준문자"/".**
@@ -211,7 +211,7 @@ ArrayList의 장점은 Collection의 타입(String , Integer 등)이 달라도 �
 ![](http://i.imgur.com/KPfR32g.png)
 
 
-##숫자 --> 문자 변환
+## 숫자 --> 문자 변환
 **String ccc = 888 + "";**
 
 
@@ -220,7 +220,7 @@ ArrayList의 장점은 Collection의 타입(String , Integer 등)이 달라도 �
 ![](http://i.imgur.com/UpTPJ1x.png)
 
 
-##문자 --> 숫자 변환
+## 문자 --> 숫자 변환
 **int ddd = Integer.parseInt(ccc);**
 **long eee = Long.parseLong(ccc);**
 
@@ -229,7 +229,7 @@ ArrayList의 장점은 Collection의 타입(String , Integer 등)이 달라도 �
 ![](http://i.imgur.com/COVe0Ot.png)
 
 
-##int --> char 변환 // char 범위보다 큰 값이 입력되면 절삭됨.
+## int --> char 변환 // char 범위보다 큰 값이 입력되면 절삭됨.
 **ddd=888;**
 **char fff = Integer.toString(ddd).charAt(0);**
 
@@ -239,7 +239,7 @@ ArrayList의 장점은 Collection의 타입(String , Integer 등)이 달라도 �
 ![](http://i.imgur.com/nEuQTEY.png)
 
 
-##하나의 숫자를 char로 변형하다. (문자열보다 효율적일 때)
+## 하나의 숫자를 char로 변형하다. (문자열보다 효율적일 때)
 **int argNum = 8; // 입력하는 숫자**
 **int argDigix = 10; // 진법**
 **char ch_argNum = Character.forDigit(argNum, argDigix);**
@@ -247,7 +247,7 @@ ArrayList의 장점은 Collection의 타입(String , Integer 등)이 달라도 �
 
 
 
-##문자열을 한글자씩 char로 분해
+## 문자열을 한글자씩 char로 분해
 **String target = "8888";**
 **char arrs[] = target.toCharArray();**
 
@@ -255,7 +255,7 @@ ArrayList의 장점은 Collection의 타입(String , Integer 등)이 달라도 �
 [출력화면]
 
 ![](http://i.imgur.com/Z173KM3.png)
-##배열 정렬
+## 배열 정렬
 **int[] arrs1 = {13, 34, 22, 4, 29};**
 
 **Arrays.sort(arrs1); // Arrays는 "import java.util.Arrays"를 import하여 사용한다.**
