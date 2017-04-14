@@ -11,7 +11,7 @@
  		  week9-1에서 구현한 "서울시내 주차장 정보"를 Retrofit 라이브러리로 맵에 구현해보겠습니다.[RemoteRetrofit]
 
 
-#1. RemoteOkHttp
+# 1. RemoteOkHttp
 
 
 --> 이번 시간에는 OkHttp 라이브러리를 사용해서 웹과 통신해 보겠습니다.
@@ -22,13 +22,13 @@
 
 ![](http://i.imgur.com/BzQjUro.png)
 
-#1.1 OkHttp 라이브러리
+# 1.1 OkHttp 라이브러리
 
 --> 먼저 OkHttp 라이브러리를 안드로이드 app gradle에 추가합니다. 
 
 			compile 'com.squareup.okhttp3:okhttp:3.6.0'
 
-#1.2 코드 사용법
+# 1.2 코드 사용법
 
 (1) OkHttp 인스턴스를 생성합니다.
 
@@ -54,7 +54,7 @@
 
 -----------------------------------------------------
 
-#2. RemoteRetrofit
+# 2. RemoteRetrofit
 
 
 ##출력 화면 
@@ -72,7 +72,7 @@
 					
    				   compile 'com.squareup.retrofit2:converter-gson:2.2.0'
 
-##2.2 json to class(pojo 사이트)
+## 2.2 json to class(pojo 사이트)
 
 
 ![](http://i.imgur.com/bkwlfG7.png) 
@@ -84,7 +84,7 @@
 
 --> pojo 사이트에서 만들어진 4개의 클래문을 안드로이드에 클래스로 복사/붙이기 합니다.
 
-##2.3 인터페이스 선언하기
+## 2.3 인터페이스 선언하기
 
 <SeoulOpenService.interface>
 
@@ -96,7 +96,7 @@
 
 			Call <'주고받을 객체'> '함수명' (@Query ('변수 이름') '자료형' '변수 이름')  ==> 여기서는 @Query에 Path를 넣어서 url에 들어갈 주소값을 동적으로 할당하였습니다.
 
-##2.4 GSON 라이브러리 사용
+## 2.4 GSON 라이브러리 사용
 
 json 형식으로 된 api의 샘플 코드를 객체 형식으로 사용하기 위해서 GSON 라이브러리를 사용합니다. 
 
